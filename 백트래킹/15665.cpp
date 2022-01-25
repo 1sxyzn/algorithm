@@ -4,8 +4,7 @@
 
 using namespace std;
 
-
-// N과 M (3)처럼 같은 수 여러번 가능
+//N과 M (7) 에서 중복되는 수 제거하는 코드 한 줄 추가
 
 const int SIZE=8;
 vector<int> num; // n의 수를 입력 받을 벡터
@@ -23,7 +22,7 @@ void backtracking(int index){
     //백트래킹
     for(int i=0; i<num.size(); i++) {
         number[index]=num[i];
-        backtracking(index + 1); //다음 수 검사
+        backtracking(index + 1);
     }
 }
 
@@ -36,7 +35,7 @@ int main() {
         num.push_back(i);
     }
     sort(num.begin(), num.end()); //오름차순 정렬
-    num.erase(unique(num.begin(),num.end()),num.end()); //중복되는 수 제거
+    num.erase(unique(num.begin(),num.end()),num.end()); //(추가 코드) 중복되는 수 제거
 
     backtracking(0);
 }
