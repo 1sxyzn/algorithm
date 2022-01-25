@@ -38,7 +38,7 @@ int main() {
         num.push_back(i);
     }
     sort(num.begin(), num.end()); //오름차순 정렬
-    num.erase(unique(num.begin(),num.end()),num.end()); //중복되는 수 제거
+    //서로 다른 자연수가 들어오므로 중복되는 값 제거해주지 않아도 됨
 
     backtracking(0);
 }
