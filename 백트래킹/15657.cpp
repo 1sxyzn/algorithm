@@ -9,7 +9,7 @@ using namespace std;
 const int SIZE=8;
 vector<int> num; // n의 수를 입력 받을 벡터
 int number[SIZE]; //답을 저장할 배열
-bool check[10001]; //방문 확인할 벡터
+//방문 확인하지 않아도 됨
 int n,m;
 
 void backtracking(int index, int start){
