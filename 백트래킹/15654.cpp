@@ -4,6 +4,8 @@
 
 using namespace std;
 
+//N과 M (1) 과 유사하지만, 입력 조건을 맞추기 위해 벡터 추가
+
 const int SIZE=8;
 vector<int> num; // n의 수를 입력 받을 벡터
 int number[SIZE]; //답을 저장할 배열
