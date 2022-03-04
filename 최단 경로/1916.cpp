@@ -1,5 +1,3 @@
-//최단경로, 다익스트라 문제인데 역추적 문제인 11779과 연관이 있음
-
 #include <iostream>
 #include <vector>
 #include <queue>
