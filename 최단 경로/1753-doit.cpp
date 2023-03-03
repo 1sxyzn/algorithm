@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 #include<queue>
+#include<climits>
 
 using namespace std;
 
@@ -13,7 +14,7 @@ int main(){
     vector<vector<pair<int,int>>>graph(v+1,vector<pair<int,int>>(0));
     vector<int>ans(v+1, INT_MAX);
     vector<bool>started(v+1,false);
-    priority_queue<pair<int,int>>q;
+    priority_queue<pair<int,int>, vector<pair<int,int>>, greater<>>q;
 
     int a,b,w;
     for(int i=0; i<e; i++){
@@ -31,7 +32,7 @@ int main(){
         started[cur.second]=true;
         for(int i=0; i<graph[cur.second].size(); i++){
             int node = graph[cur.second][i].second;
-            int weight = graph[cur.first][i].first;
+            int weight = graph[cur.second][i].first;
             if(ans[node]>ans[cur.second]+weight){ // 경유해서 더 짧은 거리로 갈 수 있다면
                 ans[node]=ans[cur.second]+weight;
                 q.push({ans[node],node}); // 갱신 된 결과를 기반으로 가까운 노드부터 다시 탐색
