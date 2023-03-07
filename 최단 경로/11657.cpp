@@ -11,7 +11,7 @@ int main(){
 
     int n,m;
     cin>>n>>m;
-    vector<long long>dist;(n+1,LONG_LONG_MAX);
+    vector<long long>dist(n+1,LONG_LONG_MAX);
     vector<tuple<int,int,int>>v;
 
     for(int i=0; i<m; i++){
